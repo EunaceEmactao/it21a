@@ -9,6 +9,7 @@ const rl= readline.createInterface({
 
 
 function mainMenu(){
+
 console.log("1. Say Hello");
 console.log("2. Compute Factorial");
 console.log("3. Exit");
@@ -18,6 +19,23 @@ if(choice === "1"){
     console.log("Hello There");
 }else if(choice === "2"){
     console.log("Factorial");
+    computeFactorial();
+
+} else if(choice==="3"){
+    console.log("Exit");
+    console.log("Exiting program... Goodbye!");
+
+    rl.close();
+
+}else{
+    console.log("Invalid choice. Please try again.");
+    mainMenu();
+}
+})
+} 
+
+
+ function computeFactorial(){
     
     rl.question("Enter a number for factorial: ", (numStr) =>{
     let num = parseInt(numStr);
@@ -36,23 +54,7 @@ console.log("The factorial of "+ num + " is = " + fact);
 
     }
 });
-
-
-} else if(choice==="3"){
-    console.log("Exit");
-    console.log("Exiting program... Goodbye!");
-
-    rl.close();
-
-}else{
-    console.log("Invalid choice. Please try again.");\
-    mainMenu();
-}
-})
-
-
-}
+ }
 
  mainMenu();
-
 

@@ -8,6 +8,7 @@ const rl= readline.createInterface({
 });
 
 
+function mainMenu(){
 console.log("1. Say Hello");
 console.log("2. Compute Factorial");
 console.log("3. Exit");
@@ -49,7 +50,6 @@ console.log("The factorial of "+ num + " is = " + fact);
 })
 
 
-
-
+}
 
 

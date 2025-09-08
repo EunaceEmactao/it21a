@@ -18,10 +18,10 @@ if(choice === "1"){
 }else if(choice === "2"){
     console.log("Factorial");
     
-    rl.question("Enter a number for factorial:", (numStr) =>{
+    rl.question("Enter a number for factorial: ", (numStr) =>{
     let num = parseInt(numStr);
 
-    if(isNaN(num) ||num<0){
+    if(isNaN(num) || num<0){
 console.log("Please enter a non-negative integer.");
 
     }else{ 
@@ -39,6 +39,10 @@ console.log("The factorial of "+ num + " is = " + fact);
 
 } else if(choice==="3"){
     console.log("Exit");
+    console.log("Exiting program... Goodbye!");
+
+    rl.close();
+
 }else{
     console.log("Invalid choice. Please try again.");
 }

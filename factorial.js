@@ -45,11 +45,14 @@ console.log("The factorial of "+ num + " is = " + fact);
     rl.close();
 
 }else{
-    console.log("Invalid choice. Please try again.");
+    console.log("Invalid choice. Please try again.");\
+    mainMenu();
 }
 })
 
 
 }
+
+ mainMenu();
 
 

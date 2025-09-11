@@ -2,6 +2,8 @@ console.log("Factorial Application");
 
 const readline = require('readline');
 
+const MathUtils = require("./mathUtils");
+
 const rl= readline.createInterface({
   input: process.stdin,
   output: process.stdout
@@ -41,19 +43,14 @@ if(choice === "1"){
     rl.question("Enter a number for factorial: ", (numStr) =>{
     let num = parseInt(numStr);
 
-    if(isNaN(num) || num<0){
-console.log("Please enter a non-negative integer.");
+   try {
+    console.log(`Factorial of ${num} is = ${MathUtils.computeFactorial(n)}`);
+   } catch (err) {
+       console.log(err.message);
+   }
 
-    }else{ 
 
-        let fact = 1;
-        for (let i = 1; i <= num; i++) {
-            fact *=i;
-            
-        }
-console.log("The factorial of "+ num + " is = " + fact);
 
-    }
     backtoMenu(); 
 });
  }

@@ -25,7 +25,18 @@ class Warrior extends Hero{
     }
 }
 
+class Mage extends Hero{
+    constructor(name, health, attack, mana){
+        super(name, health, attack);
+        this.mana = mana;
+    } 
+useAbility(){
+    console.log(`${this.name} casts Spell!`);
+}
+} 
+
 const warrior = new Warrior("Black Panther", 100, 50);
-
-
 warrior.useAbility();
+
+const mage = new Mage("Doctor Strange", 80, 8, 50);
+mage.useAbility();

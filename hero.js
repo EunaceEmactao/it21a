@@ -1,4 +1,5 @@
 //encapsulation =  you declare a private database / cannot easily manipulated  
+// inheritance 
 
 class Hero{
     #health;
@@ -16,7 +17,15 @@ getHealth(){
 }
     
 }
-const hero = new Hero("Black Panther", 100, 50);
 
 
-console.log(hero.getHealth());
+class Warrior extends Hero{
+    useAbility(){
+        console.log(`${this.name} uses.power Strike!`);
+    }
+}
+
+const warrior = new Warrior("Black Panther", 100, 50);
+
+
+warrior.useAbility();

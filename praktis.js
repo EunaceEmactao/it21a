@@ -36,7 +36,7 @@ kissKiss();
     }); }
 
 
-    function backtoMenu(){
+    function computeFactorial(){
 
         rl.question("butang og number", (num)=> {
  let nom = parseInt (num);
@@ -54,7 +54,7 @@ console.log("lahi na number");
     
     )
     }
-
+mainMenu();
 
 
 
